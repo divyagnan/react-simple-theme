@@ -17,7 +17,7 @@
     "start": "nwb serve-react-demo",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "semantic-release": "npm run build && semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {},
   "peerDependencies": {
