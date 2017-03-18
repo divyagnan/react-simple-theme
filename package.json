@@ -1,7 +1,7 @@
 {
   "name": "react-simple-theme",
   "version": "1.0.0",
-  "description": "A set of HOC's to make theming in react simple.",
+  "description": "A pair of HOC's to make theming in react simple.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -38,7 +38,10 @@
   "author": "Divyagnan Kandala <divyagnan@kanda.la> (https://github.com/divyagnan)",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divyagnan/react-simple-theme.git"
+  },
   "keywords": [
     "react-component",
     "theme"
