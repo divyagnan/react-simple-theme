@@ -1,6 +1,7 @@
 # react-simple-theme
 
 [![Build Status](https://travis-ci.org/divyagnan/react-simple-theme.svg?branch=master)](https://travis-ci.org/divyagnan/react-simple-theme)
+[![npm version](https://badge.fury.io/js/react-simple-theme.svg)](https://badge.fury.io/js/react-simple-theme)
 
 react-simple-theme provides a simple way to add theming support to your react apps.
 
