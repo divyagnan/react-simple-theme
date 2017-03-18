@@ -1,6 +1,6 @@
 {
   "name": "react-simple-theme",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A pair of HOC's to make theming in react simple.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -16,7 +16,8 @@
     "clean": "nwb clean-module && npm clean-demo",
     "start": "nwb serve-react-demo",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:fix": "eslint ./src --fix",
+    "semantic-release": "npm run build && semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -33,7 +34,8 @@
     "eslint-plugin-react": "^6.10.0",
     "nwb": "0.14.x",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "semantic-release": "^6.3.2"
   },
   "author": "Divyagnan Kandala <divyagnan@kanda.la> (https://github.com/divyagnan)",
   "homepage": "",
@@ -46,7 +48,7 @@
     "react-component",
     "theme"
   ],
-   "config": {
+  "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
