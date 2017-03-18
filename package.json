@@ -1,7 +1,7 @@
 {
   "name": "react-simple-theme",
   "version": "1.0.0",
-  "description": "react-simple-theme React component",
+  "description": "A set of HOC's to make theming in react simple.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -11,27 +11,41 @@
     "umd"
   ],
   "scripts": {
+    "commit": "git-cz",
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && npm clean-demo",
     "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "dependencies": {},
   "peerDependencies": {
     "react": ""
   },
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "nwb": "0.14.x",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
-  "author": "",
+  "author": "Divyagnan Kandala <divyagnan@kanda.la> (https://github.com/divyagnan)",
   "homepage": "",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
-  ]
+    "react-component",
+    "theme"
+  ],
+   "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

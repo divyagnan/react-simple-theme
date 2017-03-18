@@ -1,9 +1,7 @@
-import React from 'react'
+import injectThemes from './injectThemes'
+import withTheme from './withTheme'
 
-export default React.createClass({
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-})
+export {
+  injectThemes,
+  withTheme,
+}

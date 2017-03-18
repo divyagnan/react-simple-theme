@@ -1,15 +1,39 @@
-import React from 'react'
-import {render} from 'react-dom'
+import React, { Component, PropTypes as t } from 'react'
+import { render } from 'react-dom'
 
-import Component from '../../src'
+import { injectThemes } from '../../src'
+import Outer from './Outer'
+import themes from './themes'
 
-let Demo = React.createClass({
-  render() {
-    return <div>
-      <h1>react-simple-theme Demo</h1>
-      <Component/>
-    </div>
+class Demo extends Component {
+  static propTypes = {
+    activeTheme: t.string.isRequired,
+    changeTheme: t.func.isRequired,
   }
-})
 
-render(<Demo/>, document.querySelector('#demo'))
+  render() {
+    const { activeTheme, changeTheme } = this.props
+    return (
+      <div>
+        <h1>react-simple-theme demo</h1>
+        <h4>Active Theme: {activeTheme}</h4>
+        <button onClick={() => changeTheme('theme1')}>Set Theme 1</button>
+        <button onClick={() => changeTheme('theme2')}>Set Theme 2</button>
+        <button onClick={() => changeTheme('theme3')}>Set Theme 3</button>
+        <Outer />
+        <p>The contents of the themes</p>
+        <pre id="json">
+          {JSON.stringify(themes, null, 2)}
+        </pre>
+      </div>
+    )
+  }
+}
+
+const DemoWithThemes = injectThemes(
+  Demo,
+  themes,
+  'theme1',
+)
+
+render(<DemoWithThemes />, document.querySelector('#demo'))
