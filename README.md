@@ -116,7 +116,7 @@ export default withTheme(NeedsTheme)
 ```js
 this.props.changeTheme('nameOfNewTheme')
 // or 
-props.changeTheme('nameOfNewTheme)
+props.changeTheme('nameOfNewTheme')
 ```
 #### `withTheme`
 
