@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/divyagnan/react-simple-theme.svg?branch=master)](https://travis-ci.org/divyagnan/react-simple-theme)
 [![codecov](https://codecov.io/gh/divyagnan/react-simple-theme/branch/master/graph/badge.svg)](https://codecov.io/gh/divyagnan/react-simple-theme)
+[![devDependencies Status](https://david-dm.org/divyagnan/react-simple-theme/dev-status.svg)](https://david-dm.org/divyagnan/react-simple-theme?type=dev)
 [![npm version](https://badge.fury.io/js/react-simple-theme.svg)](https://badge.fury.io/js/react-simple-theme)
 
 > react-simple-theme provides a simple way to add theming support to your react apps. It exposes 2 higher order components (injectThemes and withTheme) to make this possible.
