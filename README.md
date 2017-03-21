@@ -1,5 +1,7 @@
 # react-simple-theme
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/divyagnan/react-simple-theme.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/divyagnan/react-simple-theme.svg?branch=master)](https://travis-ci.org/divyagnan/react-simple-theme)
 [![codecov](https://codecov.io/gh/divyagnan/react-simple-theme/branch/master/graph/badge.svg)](https://codecov.io/gh/divyagnan/react-simple-theme)
 [![devDependencies Status](https://david-dm.org/divyagnan/react-simple-theme/dev-status.svg)](https://david-dm.org/divyagnan/react-simple-theme?type=dev)
