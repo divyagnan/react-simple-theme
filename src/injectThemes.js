@@ -2,8 +2,8 @@ import React, { Component, PropTypes as t } from 'react'
 import Theme from './Theme'
 import { getDisplayName } from './utils'
 
-function injectThemes(WrappedComponent, themesObj, defaultTheme) {
-  return class InjectThemes extends Component {
+const injectThemes = (themesObj, defaultTheme) => WrappedComponent => (
+  class InjectThemes extends Component {
     static displayName = `InjectThemes(${getDisplayName(WrappedComponent)})`
 
     static childContextTypes = {
@@ -43,6 +43,6 @@ function injectThemes(WrappedComponent, themesObj, defaultTheme) {
       )
     }
   }
-}
+)
 
 export default injectThemes

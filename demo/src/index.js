@@ -30,10 +30,6 @@ class Demo extends Component {
   }
 }
 
-const DemoWithThemes = injectThemes(
-  Demo,
-  themes,
-  'theme1',
-)
+const DemoWithThemes = injectThemes(themes, 'theme1')(Demo)
 
 render(<DemoWithThemes />, document.querySelector('#demo'))
