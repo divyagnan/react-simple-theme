@@ -16,7 +16,7 @@
     "clean": "nwb clean-module && npm clean-demo",
     "start": "nwb serve-react-demo",
     "lint": "eslint ./src",
-    "test": "jest --coverage",
+    "test": "jest --coverage && codecov",
     "test:verbose": "jest --verbose",
     "test:watch": "jest --watch",
     "lint:fix": "eslint ./src --fix",
