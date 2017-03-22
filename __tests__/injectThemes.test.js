@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import { injectThemes } from '../src'
 import themes from '../__fixtures__/themes'
@@ -27,5 +27,13 @@ describe('injectThemes', () => {
     const component = shallow(<RootWithThemes otherProp="prop" />)
 
     expect(component.props().otherProp).toBe('prop')
+  })
+
+  it('should be able to change the active theme state', () => {
+    const RootWithThemes = injectThemes(themes, 'theme1')(RootComponent)
+    const component = mount(<RootWithThemes />)
+    component.find('button').simulate('click')
+
+    expect(component.state('activeTheme')).toBe('theme2')
   })
 })

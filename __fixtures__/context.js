@@ -3,8 +3,8 @@ const context = {
     activeTheme: {
       background: 'black',
       color: 'yellow'
-    }
-  }
+    },
+  },
 }
 
 export default context

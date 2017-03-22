@@ -1,9 +1,11 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import { withTheme } from '../src'
+import Theme from '../src/Theme'
 import ThemeNeeded from '../__fixtures__/ThemeNeeded'
 import context from '../__fixtures__/context'
+import themes from '../__fixtures__/themes'
 
 describe('withTheme', () => {
   it('should allow prop passthrough', () => {
@@ -14,7 +16,17 @@ describe('withTheme', () => {
       { context: context }
     )
 
-    expect(component.props().otherProp).toBe('prop')
+    expect(component.prop('otherProp')).toBe('prop')
+  })
+
+  it('should provide the wrapped component with a theme prop', () => {
+    const ThemedComponent = withTheme(ThemeNeeded)
+    const component = shallow(
+      <ThemedComponent />,
+      { context: context }
+    )
+
+    expect(component.prop('theme')).toBeDefined()
   })
 
   it('should read the active theme from context', () => {
@@ -46,5 +58,16 @@ describe('withTheme', () => {
     component.setContext(newContext)
 
     expect(component.props().theme).toBe(newContext.theme.activeTheme)
+  })
+
+  it('should subscribe to theme changes on mount', () => {
+    const ThemedComponent = withTheme(ThemeNeeded)
+    const fullContext = new Theme(themes, 'theme1')
+    const component = mount(
+      <ThemedComponent />,
+      { context: {theme: fullContext}}
+    )
+
+    expect(component.context().theme.subscriptions.length).toBe(1)
   })
 })
