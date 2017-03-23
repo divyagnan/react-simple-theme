@@ -1,5 +1,6 @@
 import React from 'react'
 
+/* eslint-disable react/prefer-stateless-function, react/prop-types */
 export default class RootComponent extends React.Component {
   render() {
     return (

@@ -13,7 +13,7 @@ describe('withTheme', () => {
     // pass in a custom prop to the wrapped component to see if it passes through properly
     const component = shallow(
       <ThemedComponent otherProp="prop" />,
-      { context: context }
+      { context },
     )
 
     expect(component.prop('otherProp')).toBe('prop')
@@ -23,7 +23,7 @@ describe('withTheme', () => {
     const ThemedComponent = withTheme(ThemeNeeded)
     const component = shallow(
       <ThemedComponent />,
-      { context: context }
+      { context },
     )
 
     expect(component.prop('theme')).toBeDefined()
@@ -33,7 +33,7 @@ describe('withTheme', () => {
     const ThemedComponent = withTheme(ThemeNeeded)
     const component = shallow(
       <ThemedComponent />,
-      { context: context }
+      { context },
     )
 
     expect(component.props().theme).toBe(context.theme.activeTheme)
@@ -43,16 +43,16 @@ describe('withTheme', () => {
     const ThemedComponent = withTheme(ThemeNeeded)
     const component = shallow(
       <ThemedComponent />,
-      { context: context }
+      { context },
     )
 
     const newContext = {
       theme: {
         activeTheme: {
           background: 'red',
-          color: 'blue'
-        }
-      }
+          color: 'blue',
+        },
+      },
     }
 
     component.setContext(newContext)
@@ -65,7 +65,7 @@ describe('withTheme', () => {
     const fullContext = new Theme(themes, 'theme1')
     const component = mount(
       <ThemedComponent />,
-      { context: {theme: fullContext}}
+      { context: { theme: fullContext } },
     )
 
     expect(component.context().theme.subscriptions.length).toBe(1)
