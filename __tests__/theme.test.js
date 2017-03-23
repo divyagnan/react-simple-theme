@@ -24,7 +24,7 @@ describe('Theme', () => {
   it('calling setTheme sets a new active theme', () => {
     const theme = new Theme(themes, 'theme1')
     theme.setTheme('theme2')
-    
+
     expect(theme.activeTheme).toBe(themes.theme2)
   })
 
@@ -33,6 +33,7 @@ describe('Theme', () => {
     let sum = 0
     const theme = new Theme(themes, 'theme1')
     // subscription callback increments the sum
+    /* eslint-disable no-plusplus */
     theme.subscribe(() => sum++)
     // calling setTheme should trigger the callback to increment the sum
     theme.setTheme('theme2')

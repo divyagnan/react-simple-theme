@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function, import/no-extraneous-dependencies */
 import React, { Component, PropTypes as t } from 'react'
 import { render } from 'react-dom'
 
