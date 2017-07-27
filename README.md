@@ -75,14 +75,14 @@ import { withTheme } from 'react-simple-theme'
 ```
 Then you will need to 'wrap' the component that you want themed. For example:
 
-```js
+```jsx
 const NeedsTheme = props => <div>I need a theme!</div>
 
 export default withTheme(NeedsTheme)
 ```
 That will give your component access to the `theme` prop:
 
-```js
+```jsx
 // theme is available as a prop for your wrapped components
 const NeedsTheme = ({theme}) => <div style={{background: theme.background}}>I need a theme!</div>
 
@@ -111,7 +111,7 @@ export default withTheme(NeedsTheme)
 `injectThemes` provides your component with the following props:
 
 * `activeTheme` - the name of the currently active theme (useful if you want to display the active theme name to the user)
-```js
+```jsx
 <div>{this.props.activeTheme}</div> // renders the name of the active theme
 // or
 <div>{props.activeTheme}</div>
