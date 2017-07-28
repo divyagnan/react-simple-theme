@@ -1,4 +1,5 @@
-import React, { Component, PropTypes as t } from 'react'
+import React, { Component } from 'react'
+import t from 'prop-types'
 import Theme from './Theme'
 import { getDisplayName } from './utils'
 
