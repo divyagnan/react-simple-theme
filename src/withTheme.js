@@ -4,11 +4,11 @@ import { getDisplayName } from './utils'
 
 function withTheme(WrappedComponent) {
   return class WithTheme extends Component {
-    static displayName = `InjectThemes(${getDisplayName(WrappedComponent)})`;
+    static displayName = `InjectThemes(${getDisplayName(WrappedComponent)})`
 
     static contextTypes = {
       theme: t.object,
-    };
+    }
 
     componentDidMount() {
       /* pass a callback to the subscriptions.
