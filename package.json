@@ -42,7 +42,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.0.0",
-    "jest": "^20.0.0",
+    "jest": "^21.2.0",
     "nwb": "~0.17.2",
     "prop-types": "^15.5.10",
     "react": "^15.4.2",
