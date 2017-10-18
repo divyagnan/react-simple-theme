@@ -48,8 +48,8 @@
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
-    "regenerator-runtime": "^0.11.0",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^7.0.1",
+    "regenerator-runtime": "^0.11.0"
   },
   "author": "Divyagnan Kandala <divyagnan@kanda.la> (https://github.com/divyagnan)",
   "homepage": "",
